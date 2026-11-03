@@ -54,7 +54,7 @@ The **transfer fee** (**1%** with the 1.25% trading fee, **10%** with the 10% on
 | 1.25% trading + 1% transfer (all-to-cause) | **1%** | 0% | 0% | 1.00% |
 | 10% trading + 10% transfer (all-to-cause) | **10%** | 0% | 0% | 10.00% |
 
-Creators collect their share in the app.
+Creators collect their share in the app. Paying out that share is itself a transfer of the coin, so the transfer fee applies to it too: creators effectively receive less than their creator fee percentage (about 10% less with the 10% transfer fee, 1% less with the 1% one).
 
 ## What happens at graduation
 
