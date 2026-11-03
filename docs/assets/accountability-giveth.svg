@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-labelledby="t">
+  <title id="t">A Giveth project starts with a default monthly amount. A public update showing progress can raise it; no update after funds are sent can pause payouts.</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#00d4aa"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffb454"/></marker>
+  </defs>
+  <g font-family="DM Sans, ui-sans-serif, sans-serif" text-anchor="middle">
+    <rect x="120" y="10" width="160" height="50" rx="12" fill="#111827" stroke="rgba(255,255,255,0.15)"/>
+    <text x="200" y="32" fill="#f0f4ff" font-size="14">Default</text>
+    <text x="200" y="50" fill="#f0f4ff" font-size="14">monthly amount</text>
+    <path d="M160 60 L95 128" stroke="#00d4aa" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M240 60 L305 128" stroke="#ffb454" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#b)"/>
+    <text x="80" y="88" fill="#b4c0d4" font-size="12">update shows</text>
+    <text x="80" y="104" fill="#b4c0d4" font-size="12">progress</text>
+    <text x="322" y="88" fill="#b4c0d4" font-size="12">funds sent,</text>
+    <text x="322" y="104" fill="#b4c0d4" font-size="12">no update</text>
+    <rect x="15" y="130" width="160" height="60" rx="12" fill="#06231c" stroke="#00d4aa"/>
+    <text x="95" y="156" fill="#a8ffe0" font-size="14" font-weight="bold">Amount can rise</text>
+    <rect x="225" y="130" width="160" height="60" rx="12" fill="#111827" stroke="#ffb454"/>
+    <text x="305" y="156" fill="#ffb454" font-size="14" font-weight="bold">Payouts pause</text>
+    <text x="305" y="176" fill="#b4c0d4" font-size="12">share kept for project</text>
+  </g>
+</svg>

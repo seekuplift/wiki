@@ -1,0 +1,97 @@
+# MkDocs configuration for the Seek Uplift help-center wiki.
+#
+# Material theme plus a SeekUplift brand layer (dark navy, sprout teal,
+# Space Grotesk / DM Sans, Token Sprout logo).
+# Project JavaScript is limited to Algolia DocSearch / Ask AI
+# (docs/javascripts/algolia-*.js). Analytics and cookie-consent plugins
+# stay OFF: the wiki is rendered inside the app's incognito WebView, where
+# anything that touches browser storage misbehaves. Ask AI is gated on
+# searchMode / public config; quota errors remount keyword search. If
+# config is missing or the widget fails to load, Material lunr stays.
+#
+# Ticket HC-2 (redesign/launchpad-mobile-redesign/tickets-help-center.md).
+# Design spec: docs/superpowers/specs/2026-08-27-in-app-help-center-design.md
+#   section 2 "Wiki". Brand tokens: brand/SEEKUPLIFT_DESIGN_SYSTEM.md.
+
+site_name: Seek Uplift
+site_description: Seek Uplift help center.
+# Public test Pages URL under the corp account. HC-3 consumes this as EXPO_PUBLIC_WIKI_URL.
+site_url: https://seekuplift.com/wiki/
+
+# Build output goes to site/ (the MkDocs default). Both site/ and .venv/ are
+# gitignored — see .gitignore.
+docs_dir: docs
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  custom_dir: overrides
+  font:
+    text: DM Sans
+    code: DM Mono
+  palette:
+    # Dark-first, matching the app. No light/dark toggle — a toggle would
+    # persist to localStorage, which is unreliable in the incognito WebView.
+    scheme: slate
+    primary: black
+    accent: teal
+  features:
+    - navigation.top
+    - navigation.footer
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/algolia.css
+
+# Algolia DocSearch v5. algolia-public.js holds the public search-only config
+# (appId, search key, index names, assistantId, searchMode). searchMode is the
+# operator switch: lunr | keyword | askAi. Init remounts keyword search if
+# Ask AI completions fail with a quota/auth error. If config or the CDN
+# fails, Material lunr stays. Write/admin keys must never appear here or in
+# those files. See README.md "Switching search modes".
+extra_javascript:
+  - javascripts/algolia-public.js
+  - javascripts/algolia-init.js
+
+extra:
+  generator: false
+
+copyright: Seek Uplift
+
+# No `plugins:` key — accept MkDocs' default, which includes the built-in
+# `search` plugin. Lunr is always built so search still works when Algolia
+# public config is incomplete, the CDN is blocked, or the WebView has no
+# network. The `search.suggest` theme feature depends on this plugin.
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Fees: fees.md
+  - Accountability: accountability.md
+  - AI agents: agents.md
+  - Security: security.md
+  - Support: support.md
+  - Legal:
+      - Terms and Conditions: terms.md
+      - Privacy Policy: privacy-policy.md
+      - Restricted jurisdictions: restricted-jurisdictions.md
