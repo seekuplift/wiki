@@ -70,6 +70,7 @@ When the curve fills, Meteora moves the coin to a DAMM v2 pool.
 - **0.01 SOL launch fee** to create a coin (SeekUplift receives 0.009 SOL, Meteora 0.001 SOL). The launch also pays about **0.0108 SOL** of rent and network fee for the coin's accounts (about **0.0093 SOL** without a creator first buy), so a launch costs about **0.0208 SOL** in total (measured: 0.020837 SOL with a first buy and the transfer fee).
 - 10 SKR to create an in-app wallet.
 - SOL network gas is separate.
+- Up to **1%** of donations to a cause goes to the donation platform, such as Giveth.
 - Fees to appeal decisions on whether funding to ideas or causes should be released. Creator fees are no-strings-attached and instantly claimable.
 
 [^rounding]: Fees and fee shares are calculated on-chain in whole token units (the smallest unit of SKR or of the coin), so the amount charged or received on a given trade or transfer can differ slightly from the stated percentage because of rounding, most noticeably on very small amounts. The percentages on this page may themselves be rounded. The amount the smart contract charges controls; see the [Terms](terms.md) (sections 6.1 and 12.2).
